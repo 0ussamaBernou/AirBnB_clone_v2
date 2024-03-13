@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Script setting up your web servers for the deployment of web_static
 
 # Install Nginx if it's not already installed
 if ! dpkg -s nginx >/dev/null 2>&1; then
