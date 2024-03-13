@@ -43,6 +43,6 @@ server {
 EOF
 
 # Restart Nginx
-sudo systemctl restart nginx
+sudo service nginx restart
 
 exit 0
