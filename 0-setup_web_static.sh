@@ -44,3 +44,5 @@ EOF
 
 # Restart Nginx
 sudo systemctl restart nginx
+
+exit 0
