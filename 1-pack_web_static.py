@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from fabric.api import run
+from fabric.api import local
 import datetime
 
 # Get current datetime object
@@ -11,10 +11,10 @@ def do_pack():
     Generates a .tgz archive from the contents of the web_static folder of the AirBnB Clone repo
     """
 
-    run("mkdir -p ./versions")
+    local("mkdir -p ./versions")
     time = f"{now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}"
     archive = f"./versions/web_static_{time}.tgz"
-    code = run(
+    code = local(
         f"tar -cvzf {archive} /data/web_static",
         capture=True,
     )
