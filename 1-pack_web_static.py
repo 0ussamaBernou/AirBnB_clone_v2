@@ -12,9 +12,11 @@ def do_pack():
     """
 
     local("mkdir -p ./versions")
-    return (
-        local(
-            f"tar -cvzf ./versions/web_static_{now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz /data/web_static",
-            capture=True,
-        )
-    ) or None
+    archive = f"./versions/web_static_\
+    {now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz"
+    code = local(
+        f"tar -cvzf {archive} /data/web_static",
+        capture=True,
+    )
+
+    return (archive) if code == 0 else None
