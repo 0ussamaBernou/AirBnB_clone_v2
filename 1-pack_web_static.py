@@ -12,8 +12,7 @@ def do_pack():
     """
 
     local("mkdir -p ./versions")
-    archive = f"./versions/web_static_\
-    {now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz"
+    archive = f"./versions/web_static_{now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz"
     code = local(
         f"tar -cvzf {archive} /data/web_static",
         capture=True,
