@@ -14,7 +14,7 @@ def do_pack():
     local("mkdir -p ./versions")
     return (
         local(
-            f"tar -cvzf ./versions/web_static_{now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz /data/web_static/",
+            f"tar -cvzf ./versions/web_static_{now.year}{now.month}{now.day}{now.hour}{now.minute}{now.second}.tgz /data/web_static",
             capture=True,
         )
     ) or None
