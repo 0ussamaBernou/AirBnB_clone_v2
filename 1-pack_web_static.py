@@ -8,7 +8,8 @@ now = datetime.datetime.now()
 
 def do_pack():
     """
-    Generates a .tgz archive from the contents of the web_static folder of the AirBnB Clone repo
+    Generates a .tgz archive from the contents of
+    the web_static folder of the AirBnB Clone repo
     """
 
     local("mkdir -p ./versions")
