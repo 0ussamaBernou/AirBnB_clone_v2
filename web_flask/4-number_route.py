@@ -30,8 +30,8 @@ def c(text):
 @app.route("/python/<text>", strict_slashes=False)
 def python(text):
     """
-    Display Python followed by the value of the text variable on the route
-    /python/<text>
+    Display Python followed by the value of the text variable
+    on the route /python/<text>
     """
     return f"Python {text.replace('_', ' ')}"
 
